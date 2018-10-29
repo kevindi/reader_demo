@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:id="@+id/action_bar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp">
+
+                    <RelativeLayout
+                        android:id="@+id/reader_title_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <Button
+                            android:textColor="#fff"
+                            android:text="&lt;"
+                            android:textSize="25dp"
+                            android:layout_width="30dp"
+                            android:background="@android:color/transparent"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content" />
+                        <Button
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:textColor="#fff"
+                            android:text="&#8942;"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="#fff"
+                            android:id="@+id/reader_title"
+                            android:singleLine="true"
+                            android:textSize="18dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Title"
+                            tools:text="This is title for share article"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+            <TextView
+                android:textColor="#fff"
+                android:id="@+id/view_pager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="page 1"
+                android:layout_gravity="center_horizontal"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/footer_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Like"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Comment"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Share"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
